@@ -1,11 +1,11 @@
-require 'gosu'
+require "gosu"
+require_relative "frogger/window"
+require_relative "frogger/player"
 
-class Frogger < Gosu::Window
-  def initialize
-   super(640, 480, false)
-   self.caption = 'Ribbit'
+module Frogger
+  def self.run
+    Window.new.show
   end
 end
 
-window = Frogger.new
-window.show
+Frogger.run
